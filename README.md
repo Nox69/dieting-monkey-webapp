@@ -15,6 +15,7 @@ cd dieting-monkey-app
 
 Run the build to kickstart the angular application
 ```sh
+cd angular
 ng build
 ng serve
 ```
