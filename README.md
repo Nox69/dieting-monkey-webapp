@@ -1,10 +1,38 @@
 # Dieting Monkey Web Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli)
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) and serves as the Frontend for Smoothie Application.
 
-## Development server
+## Running the app with an IDE (i.e. Visual Studio Code with Node and npm installed)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Clone the service to your computer using the command below:
+```sh
+git clone https://github.com/Nox69/dieting-monkey-app.git
+cd dieting-monkey-app
+```
+
+Run the build to kickstart the angular application
+```sh
+ng build
+ng serve
+```
+
+Navigate to `http://localhost:4200/.` The app will automatically reload if you change any of the source files.
+
+## Running the app withount an IDE (Docker and Node must be installed)
+
+Clone the service to your computer using the command below:
+```sh
+git clone https://github.com/Nox69/dieting-monkey-app.git
+cd dieting-monkey-app
+```
+
+Run the build to kickstart the angular application
+```sh
+ng build --prod
+docker build -t dieting-monkey-app .
+docker run --name dieting-monkey-app-container -d -p 4200:4200 dieting-monkey-app
+```
+
 
 ## Code scaffolding
 

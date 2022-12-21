@@ -22,6 +22,7 @@ export class ProductComponent implements OnInit {
   errMessage: string;
   isAdmin: boolean;
   updateSmoothie: Smoothie = new Smoothie();
+  searchText : any;
 
   constructor(
     private productsService: ProductsService,
