@@ -1,6 +1,9 @@
 # Dieting Monkey Web Application
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) and serves as the Frontend for Smoothie Application.
+We can register ourselves and login with the credentials in order to Access the Smoothie Lists
+Only certain email-ids are whitelisted to be part of admin. So use them in order to Create new Smoothies.
+If registering as normal user you will get the option to view the smoothies and add it to Cart.
 
 ## Running the app with an IDE (i.e. Visual Studio Code with Node and npm installed)
 
