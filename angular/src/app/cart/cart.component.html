@@ -1,0 +1,11 @@
+<h2>ITEMS</h2>
+<label class="error-message">{{ errMessage }}</label>
+<h3>Welcome to your online cart.</h3>
+
+<div class="container">
+  <mat-card class="card-item" *ngFor="let smoothie of smoothies">
+    <mat-card-content>{{ smoothie.smoothieName }}</mat-card-content>
+    <mat-card-content>{{ smoothie.smoothiePrice | currency:'EUR':true }}</mat-card-content>
+    <mat-icon svgIcon="delete" (click)="deleteItem(smoothie)"></mat-icon>
+  </mat-card>
+</div>

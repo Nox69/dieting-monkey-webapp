@@ -1,0 +1,70 @@
+<div class="authentication">
+  <label *ngIf="errMessage" class="error-message">{{ errMessage }}</label>
+
+  <div class="login-form">
+    <h2>LOGIN</h2>
+    <strong *ngIf="submitMessage" class="error-message">{{
+      submitMessage
+      }}</strong>
+
+    <mat-form-field>
+      <input class="emailId" matInput [formControl]="emailId" placeholder="Email ID" required />
+      <mat-error *ngIf="emailId.invalid">{{
+        getUserNameInvalidMessage()
+        }}</mat-error>
+    </mat-form-field>
+    <br />
+    <br />
+
+    <mat-form-field>
+      <input class="password" matInput type="password" [formControl]="password" placeholder="Password"
+        [type]="hideLp ? 'password' : 'text'" required />
+
+      <mat-error *ngIf="password.invalid">{{
+        getPasswordInvalidMessage()
+        }}</mat-error>
+    </mat-form-field>
+    <mat-icon matSuffix (click)="hideLp = !hideLp" svgIcon="{{ hideLp ? 'showIc' : 'hideIc' }}"></mat-icon>
+    <br />
+    <br />
+    <div class="button">
+      <button mat-raised-button color="primary" (click)="loginSubmit()">
+        Login
+      </button>
+    </div>
+  </div>
+
+  <div class="register-form">
+    <h2>REGISTER</h2>
+
+    <mat-form-field>
+      <input matInput [(ngModel)]="addUser.emailId" placeholder="Email ID" />
+    </mat-form-field>
+    <br />
+    <br />
+
+    <mat-form-field>
+      <input matInput [(ngModel)]="addUser.name" placeholder="Full Name" />
+    </mat-form-field>
+    <br />
+    <br />
+
+    <mat-form-field>
+      <input matInput [(ngModel)]="addUser.password" type="password" placeholder="Password" />
+    </mat-form-field>
+    <br />
+    <br />
+
+    <mat-form-field>
+      <input matInput [(ngModel)]="addUser.rePassword" type="password" placeholder="Re-Password" />
+    </mat-form-field>
+    <br />
+
+    <div class="button">
+      <button mat-raised-button color="primary" (click)="createUser()">
+        Register
+      </button>
+    </div>
+    <router-outlet></router-outlet>
+  </div>
+</div>

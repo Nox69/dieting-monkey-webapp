@@ -1,0 +1,36 @@
+.container-title {
+    display: inline-flex;
+    flex-flow: column wrap;
+    margin: 20px;
+    width: 90%;
+}
+
+.container {
+    display: inline-flex;
+    flex-flow: row wrap;
+    margin: 20px;
+}
+
+.card-item {
+    height: 100px;
+    width: 100px;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    background-color: #FB8C00;
+}
+
+.card-item-title {
+    height: 15px;
+}
+
+.button {
+    display: flex;
+    justify-content: space-around;
+}
+
+.error-message {
+    display: block;
+    margin: 15px 0;
+    background-color: crimson;
+}

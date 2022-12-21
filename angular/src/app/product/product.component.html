@@ -1,0 +1,56 @@
+<!-- Label to display any error messages -->
+<h2>SMOOTHIES</h2>
+<label class="error-message">{{ errMessage }}</label>
+
+<div class="product-wrapper-search">
+  <mat-form-field>
+    <input matInput [(ngModel)]="searchText" placeholder="Search Smoothies" />
+  </mat-form-field>
+</div>
+<div *ngIf="isAdmin" class="product-taker-panel">
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Add Your Smoothie
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+
+    <div class="product-taker-wrapper">
+      <mat-form-field>
+        <input matInput [(ngModel)]="addSmoothie.smoothieName" placeholder="Name of the Smoothie" name="Name" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput [(ngModel)]="addSmoothie.smoothieIngredients" placeholder="Add Ingredients for your smoothie"
+          name="Ingredients" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput [(ngModel)]="addSmoothie.smoothieNutritionValue" placeholder="Nutrition of the Smoothie"
+          name="Price" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput [(ngModel)]="addSmoothie.smoothiePrice" placeholder="Price of the Smoothie" name="Price" />
+      </mat-form-field>
+
+
+
+      <div class="button">
+        <button mat-button (click)="addSmoothies()">Done</button>
+      </div>
+    </div>
+  </mat-expansion-panel>
+  <mat-error *ngIf="errorMessage"><label class="error-message">{{ errorMessage }}</label></mat-error>
+</div>
+
+<div class="container">
+  <mat-card class="card" *ngFor="let smoothie of smoothies | searchPipe: searchText">
+    <mat-card-title>{{ smoothie.smoothieName }}</mat-card-title>
+    <mat-card-content><strong>Ingredients : </strong>{{ smoothie.smoothieIngredients }}</mat-card-content>
+    <mat-card-content><strong>Nurition Value :</strong> {{ smoothie.smoothieNutritionValue }} KCal</mat-card-content>
+    <mat-card-content><strong>Price :</strong> {{ smoothie.smoothiePrice | currency:'EUR':true}}</mat-card-content>
+    <mat-icon *ngIf="!isAdmin" svgIcon="addcart" (click)="addToCart(smoothie)"></mat-icon>
+    <mat-icon *ngIf="isAdmin" svgIcon="edit" (click)="updateSmoothieDetails(smoothie)"></mat-icon>
+  </mat-card>
+</div>

@@ -1,0 +1,26 @@
+<mat-icon svgIcon="nav" (click)="sideNav.toggle()"> </mat-icon>
+<h3>WELCOME TO DIETING MONKEY = {{ userId }}</h3>
+<mat-sidenav-container>
+  <mat-sidenav #sideNav (click)="sideNav.toggle()" mode="side" opened="false">
+    <ul class="nav sidebar-nav">
+      <li class="sidebar-brand">
+        <strong>
+          <a routerLinkActive="active" routerLink="/dashboard/smoothies">Smoothies &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp;
+            <mat-icon svgIcon="not"></mat-icon> </a></strong>
+      </li>
+      <li *ngIf="!isAdmin" class="sidebar-brand">
+        <strong>
+          <a routerLinkActive="active" routerLink="/dashboard/cart">Cart &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp;
+            <mat-icon svgIcon="shop"></mat-icon> </a></strong>
+      </li>
+      <li class="sidebar-brand">
+        <strong>
+          <a role="button" (click)="logout()">Log Out &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <mat-icon svgIcon="logout" (click)="logout()"></mat-icon> </a></strong>
+      </li>
+    </ul>
+  </mat-sidenav>
+  <router-outlet></router-outlet>
+</mat-sidenav-container>

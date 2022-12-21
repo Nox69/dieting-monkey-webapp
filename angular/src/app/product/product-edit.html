@@ -1,0 +1,20 @@
+<div mat-dialog-content class="product-taker-wrapper">
+  <h3>Edit Smoothie Details</h3>
+  <mat-form-field>
+    <input [(ngModel)]="data.smoothieName" name="Edit Smoothie Name" matInput placeholder="Name" type="text">
+  </mat-form-field>
+  <mat-form-field>
+    <textarea [(ngModel)]="data.smoothieIngredients" name="Edit Smoothie Ingredients" matInput placeholder="Ingredients"
+      type="text"></textarea>
+  </mat-form-field>
+  <mat-form-field>
+    <input [(ngModel)]="data.smoothieNutritionValue" name="Edit Smoothie Nutrition Value" matInput
+      placeholder="Nurition Value" type="text">
+  </mat-form-field>
+  <mat-form-field>
+    <input [(ngModel)]="data.smoothiePrice" name="Edit Smoothie Price" matInput placeholder="Price" type="text">
+  </mat-form-field>
+
+  <div mat-dialog-actions>
+    <button mat-raised-button color="primary" (click)="onSave()">Save</button>
+  </div>

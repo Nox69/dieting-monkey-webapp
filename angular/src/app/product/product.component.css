@@ -1,0 +1,41 @@
+.productComponent {
+  margin: 2em;
+  background-color: brown;
+}
+
+.product-taker-panel {
+  width: 50vw;
+  margin: auto;
+  background-color: black;
+}
+.product-taker-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.product-taker-wrapper-search {
+  width: 30vw;
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+}
+.button {
+  display: flex;
+  justify-content: center;
+}
+.container {
+  display: inline-flex;
+  flex-flow: row wrap;
+  margin: 20px;
+}
+.card {
+  height: 190px;
+  width: 300px;
+  margin-left: 1.5em;
+  margin-bottom: 2.5em;
+  background-color: #FB8C00;
+}
+.error-message {
+  display: block;
+  margin: 15px 0;
+  background-color: crimson;
+}

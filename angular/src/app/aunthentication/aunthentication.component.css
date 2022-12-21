@@ -1,0 +1,33 @@
+.authentication {
+    width: 100%;
+    margin: auto;
+
+}
+.login-form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+.register-form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+
+.button {
+    display: flex;
+   justify-content: space-around;
+}
+  
+
+
+ 
