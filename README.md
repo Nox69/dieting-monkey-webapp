@@ -1,8 +1,8 @@
 # Dieting Monkey Web Application
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) and serves as the Frontend for Smoothie Application.
-We can register ourselves and login with the credentials in order to Access the Smoothie Lists
-Only certain email-ids are whitelisted to be part of admin. So use them in order to Create new Smoothies.
+We can register ourselves and login with the credentials in order to Access the Smoothie List.
+Only certain email-ids are whitelisted to be part of admin will be shared in email. So use them in order to Create new Smoothies.
 If registering as normal user you will get the option to view the smoothies and add it to Cart.
 
 ## Running the app with an IDE (i.e. Visual Studio Code with Node and npm installed)
@@ -44,15 +44,3 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
