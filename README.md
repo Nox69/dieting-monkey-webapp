@@ -10,7 +10,7 @@ If registering as normal user you will get the option to view the smoothies and 
 Clone the service to your computer using the command below:
 ```sh
 git clone https://github.com/Nox69/dieting-monkey-app.git
-cd dieting-monkey-app
+cd dieting-monkey-app/angular
 ```
 
 Run the build to kickstart the angular application
