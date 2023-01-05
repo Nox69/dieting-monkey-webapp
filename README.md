@@ -27,12 +27,13 @@ Navigate to `http://localhost:4200/.` The app will automatically reload if you c
 Clone the service to your computer using the command below:
 ```sh
 git clone https://github.com/Nox69/dieting-monkey-app.git
-cd dieting-monkey-app
+cd dieting-monkey-app/angular
 ```
 
 Run the build to kickstart the angular application
 ```sh
 ng build --prod
+cd .. 
 docker build -t dieting-monkey-app .
 docker run --name dieting-monkey-app-container -d -p 4200:4200 dieting-monkey-app
 ```
